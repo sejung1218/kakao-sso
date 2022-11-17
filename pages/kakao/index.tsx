@@ -11,8 +11,9 @@ export default function Kakao() {
     // kakao access token 확인
 
     kakao.API.request({
-      // url: "/v1/user/logout",
-      url: "/v1/user/unlink",
+      url: "/v1/user/logout", // 왜 동작안할까?
+      // https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#logout
+      // url: "/v1/user/unlink",
       success: (data: any) => {
         console.log("data : ", data);
         Router.push("/");
